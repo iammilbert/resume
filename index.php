@@ -392,30 +392,30 @@ Integra
 
 <?php
 
-include('config.php');
+// include('config.php');
 
-if (isset($_POST['send'])) {
+// if (isset($_POST['send'])) {
   
-  $name = $_POST["name"];
-  $email =$_POST["email"];
-  $message = $_POST["message"];
-  $subject = $_POST["subject"];
-  $dateContact = $_POST["dateContact"];
-  $timeContact = $_POST["timeContact"];
+//   $name = $_POST["name"];
+//   $email =$_POST["email"];
+//   $message = $_POST["message"];
+//   $subject = $_POST["subject"];
+//   $dateContact = $_POST["dateContact"];
+//   $timeContact = $_POST["timeContact"];
 
-  $sql = "INSERT INTO contact(name, email, message, subject, dateContact, timeContact) VALUES('".$name."', '".$email."', '".$message."', '".$subject."', '".$dateContact."', '".$timeContact."')";
-  $query = mysqli_query($conn, $sql);
+//   $sql = "INSERT INTO contact(name, email, message, subject, dateContact, timeContact) VALUES('".$name."', '".$email."', '".$message."', '".$subject."', '".$dateContact."', '".$timeContact."')";
+//   $query = mysqli_query($conn, $sql);
 
-  if ($query) {
-              echo '<script type="text/javascript">  swal("Thank You", "Sent Successfully", "success")</script>';
+//   if ($query) {
+//               echo '<script type="text/javascript">  swal("Thank You", "Sent Successfully", "success")</script>';
              
-           }else { 
-                echo '<script type="text/javascript">  swal("Thank You", "Sent Successfully", "success")</script>';
+//            }else { 
+//                 echo '<script type="text/javascript">  swal("Thank You", "Sent Successfully", "success")</script>';
                
-           } 
-         }
+//            } 
+//          }
 
-?>  
+?>
 
 
 
