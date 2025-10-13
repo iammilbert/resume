@@ -658,7 +658,7 @@
 
     // Set PDF options
     const opt = {
-      margin: [0.5, 0.5, 0.5, 0.5], // 0.5-inch margins
+      margin: [0.3, 0.3, 0.3, 0.3], // 0.5-inch margins
       filename: 'Michael_Gabriel_Resume.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: {
@@ -676,7 +676,6 @@
       pagebreak: {
         mode: ['avoid-all', 'css', 'legacy'],
         before: '#portfolio', // prevent break before portfolio
-        before: '#resume',
         after: '#services' // avoid break before services
       }
     };
