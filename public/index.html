@@ -650,6 +650,55 @@
     });
   </script>
 
+
+  <!-- JS Libraries for PDF Export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+  document.getElementById("downloadBtn").addEventListener("click", function () {
+    const element = document.getElementById("resumeContent");
+
+    // Optional: temporarily hide the download button for cleaner PDF
+    const btn = document.getElementById("downloadBtn");
+    btn.style.display = "none";
+
+    // Set PDF options
+    const opt = {
+      margin: [0.5, 0.5, 0.5, 0.5], // 0.5-inch margins
+      filename: 'Michael_Gabriel_Resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        scrollY: 0,
+        scrollX: 0,
+        backgroundColor: '#ffffff'
+      },
+      jsPDF: {
+        unit: 'in',
+        format: 'a4',
+        orientation: 'portrait'
+      },
+      pagebreak: {
+        mode: ['avoid-all', 'css', 'legacy'],
+        before: '#portfolio', // prevent break before portfolio
+        after: '#services' // avoid break before services
+      }
+    };
+
+    // Create PDF and download
+    html2pdf()
+      .set(opt)
+      .from(element)
+      .save()
+      .then(() => {
+        // restore button visibility after saving
+        btn.style.display = "block";
+      });
+  });
+</script>
+
+
 </body>
 
 </html>
