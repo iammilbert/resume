@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Gabriel - Resume</title>
-
-  <!-- Bootstrap CSS -->i want to be able to download in pdf, as a Resume 
-
 <div style='display:none'><a href='https://www.oxo.si/'>Mihael Dev</a></div>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +27,44 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- PDF / Print helper styles (non-invasive) -->
+  <style>
+    /* Position the download button in the header area (non-destructive) */
+    #downloadBtn {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      z-index: 9999;
+      border-radius: 50px;
+      padding: 10px 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    /* Make sure the PDF looks clean on white background */
+    @media print {
+      body, html {
+        background: #fff !important;
+      }
+      /* hide interactive UI elements for PDF */
+      #downloadBtn, .mobile-nav-toggle, .portfolio-lightbox, .back-to-top {
+        display: none !important;
+      }
+      /* hide the form submit button in contact area when printing */
+      #contact .btn, #contact button[type="submit"] {
+        display: none !important;
+      }
+      /* remove shadows */
+      * {
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+      }
+    }
+
+    /* When generating PDF via html2pdf we hide some elements */
+    .no-pdf {
+      /* elements with this class will be hidden in the PDF by JS */
+    }
+  </style>
 </head>
 
 <body>
@@ -71,282 +100,280 @@
     </div>
   </header><!-- End Header -->
 
+  <!-- Download button (floating) -->
+  <button id="downloadBtn" class="btn btn-success" title="Download Resume as PDF">
+    <i class="bi bi-download"></i> Download Resume (PDF)
+  </button>
 
- 
-
+  <!-- ======= Main content wrapped for PDF export ======= -->
+  <!-- We wrap the entirety of the visible resume content in #resumeContent -->
   <main id="main">
-    <!-- ======= About Section ======= -->
-    <div id="about" class="about">
-      <div class="container-fluid">
-        <div class="row text-center mb-3" style="background-color: skyblue">
-          <h1 class="mt-3 mb-1 text-uppercase" style="font-family: Exotc350 Bd BT; font-weight: bolder; font-size: 50px">Michael Gabriel</h1>
-          <h6 class="text-uppercase text-danger" style="font-family: Exotc350 Bd BT; font-weight: bolder;">fullstack web Developer</h6>
-        </div>
+    <div id="resumeContent">
+      <!-- ======= About Section ======= -->
+      <div id="about" class="about">
+        <div class="container-fluid">
+          <div class="row text-center mb-3" style="background-color: skyblue">
+            <h1 class="mt-3 mb-1 text-uppercase" style="font-family: Exotc350 Bd BT; font-weight: bolder; font-size: 50px">Michael Gabriel</h1>
+            <h6 class="text-uppercase text-danger" style="font-family: Exotc350 Bd BT; font-weight: bolder;">fullstack web Developer</h6>
+          </div>
 
-        <div class="section-title mt-5 text-center" style>
-          <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-size:22px; text-justify: center;">Career Objective</h2>
-          <p style="font-family: Gebriola">Highly motivated and detail-oriented Full Stack Developer with 6 years of experience in designing, developing, and deploying robust web applications. Proficient in both front-end and back-end technologies, adept at working with various frameworks, libraries, and databases. Skilled in collaborating with cross-functional teams to deliver innovative solutions that meet client requirements and exceed expectations. Seeking to leverage expertise in full stack development to contribute to a dynamic team and drive continuous improvement in software development processes.</p>
-        </div>
+          <div class="section-title mt-5 text-center" style>
+            <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-size:22px; text-justify: center;">Career Objective</h2>
+            <p style="font-family: Gebriola">Highly motivated and detail-oriented Full Stack Developer with 6 years of experience in designing, developing, and deploying robust web applications. Proficient in both front-end and back-end technologies, adept at working with various frameworks, libraries, and databases. Skilled in collaborating with cross-functional teams to deliver innovative solutions that meet client requirements and exceed expectations. Seeking to leverage expertise in full stack development to contribute to a dynamic team and drive continuous improvement in software development processes.</p>
+          </div>
 
-        <div class="row">
- 
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-             <div class="section-title">
-               <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Personal Data</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 July, 1995</span></li>
-                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+234 813 795 0284</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Marital Status:</strong> <span>Single</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>State:</strong> <span>Cross River, Calabar</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Religion:</strong> <span>Chritianity</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span><a target="_blank" href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a></span></li>
-                </ul>
+          <div class="row">
+
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <div class="section-title">
+                <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Personal Data</h2>
               </div>
-              <div class="col-md-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSC. Computer Science</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>M.Sc:</strong> <span>In-View</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Gender:</strong> <span>Male</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>Nigeria</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 July, 1995</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+234 813 795 0284</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Marital Status:</strong> <span>Single</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>State:</strong> <span>Cross River, Calabar</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Religion:</strong> <span>Chritianity</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>E-mail:</strong> <span><a target="_blank" href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a></span></li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSC. Computer Science</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>M.Sc:</strong> <span>In-View</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Gender:</strong> <span>Male</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>Nigeria</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
+      </div><!-- End About Section -->
 
-      </div>
-    </div><!-- End About Section -->
+      <!-- ======= Resume Section ======= -->
+      <section id="resume" class="resume">
+        <div class="container">
 
-    <!-- ======= Facts Section ======= -->
-   
-
-   
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="section-title">
-               <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Experience</h2>
-            </div>
-            <div class="resume-item">
-              <h4>FULL STACK WEB DEVELOPER (REMOTE) </h4>
-              <h5>Febraury, 2023 – September, 2025</h5>
-              <p><em>Filly Coder.</em></p>
-              <ul style="font-family: Gebriola">
-                <li>Writing of API's and Generating Token Authentication using PHP JWT, Laravel Sanctum and Passport For Mobile/Web Development. </li>
-                <li>Participating in the design and creation of scalable Front End using VUE.JS, JavaScript, CSS/ Bootstrap, Writing clean, functional code on the back-end using Laravel, PHP OOP, MYSQL, CORE PHP and Composer Packages</li>
-                <li>Testing and fixing bugs or other coding issues using PHP units Testing, PES Testing, Postman and Thunder Client</li>
-                <li>Oversee the efficient of project. And Monitoring Using, Github and Packagist</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>FULL STACK WEB DEVELOPER</h4>
-              <h5>March, 2020– December 2022</h5>
-              <p><em>DARL cloud Soft & Engr, Ltd. Abuja, Nigeria.</em></p>
-              <ul style="font-family: Gebriola">
-                <li>Write well designed, testable, efficient code by using best software development practices</li>
-                <li>Create website layout/user interface by using standard HTML 5, CSS, JavaScript and Bootstrap</li>
-                <li>Integrate data from various back-end services and databases</li>
-                <li>Integrate data from various back-end services and databases : MYSQL, Laravel, CORE PHP, PHP OOP.</li>
-                <li>Create and maintain software documentation using Github and Postman</li>
-              </ul>
-            </div>
-            
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-             <div class="section-title">
-               <h2 class="text-uppercase text-primary" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Education</h2>
-            </div>
-            <div class="resume-item">
-              <h4 style="font-family: Gebriola">National Youth Services Corps</h4>
-              <h5 style="font-family: Gebriola" class="text-dark">2020 - 2021</h5>
-              <p style="font-family: Gebriola"><em>Heritage College, Egbe, Kogi State, Nigeria</em></p>
-              <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Discharge Certificate</em></p>
-            </div>
-
-            <div class="resume-item">
-              <h4 style="font-family: Gebriola">Bachelor of Science, Computer Science</h4>
-              <h5 style="font-family: Gebriola" class="text-dark">2015 - 2019</h5>
-              <p style="font-family: Gebriola"><em>Kaduna State University, Kaduna, Nigeria</em></p>
-              <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Second Class Upper (4.15 GPA)</em></p>
-            </div>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="section-title">
+                <h2 class="text-uppercase text-info" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Experience</h2>
+              </div>
+              <div class="resume-item">
+                <h4>FULL STACK WEB DEVELOPER (REMOTE) </h4>
+                <h5>Febraury, 2023 – September, 2025</h5>
+                <p><em>Filly Coder.</em></p>
+                <ul style="font-family: Gebriola">
+                  <li>Writing of API's and Generating Token Authentication using PHP JWT, Laravel Sanctum and Passport For Mobile/Web Development. </li>
+                  <li>Participating in the design and creation of scalable Front End using VUE.JS, JavaScript, CSS/ Bootstrap, Writing clean, functional code on the back-end using Laravel, PHP OOP, MYSQL, CORE PHP and Composer Packages</li>
+                  <li>Testing and fixing bugs or other coding issues using PHP units Testing, PES Testing, Postman and Thunder Client</li>
+                  <li>Oversee the efficient of project. And Monitoring Using, Github and Packagist</li>
+                </ul>
+              </div>
 
               <div class="resume-item">
-              <h4 style="font-family: Gebriola">West Africa Examination Council (WAEC)</h4>
-              <h5 style="font-family: Gebriola" class="text-dark">2004 - 2010</h5>
-              <p style="font-family: Gebriola"><em>Obanliku Community Secondary, School, Cross River State, Nigeria</em></p>
-              <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Distinctions</em></p>
+                <h4>FULL STACK WEB DEVELOPER</h4>
+                <h5>March, 2020– December 2022</h5>
+                <p><em>DARL cloud Soft & Engr, Ltd. Abuja, Nigeria.</em></p>
+                <ul style="font-family: Gebriola">
+                  <li>Write well designed, testable, efficient code by using best software development practices</li>
+                  <li>Create website layout/user interface by using standard HTML 5, CSS, JavaScript and Bootstrap</li>
+                  <li>Integrate data from various back-end services and databases</li>
+                  <li>Integrate data from various back-end services and databases : MYSQL, Laravel, CORE PHP, PHP OOP.</li>
+                  <li>Create and maintain software documentation using Github and Postman</li>
+                </ul>
+              </div>
+
             </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div class="section-title">
-               <h2 class="text-uppercase text-success" style="font-family: Gebriola; font-weight: bolder; font-size: 26px">Certification</h2>
-            </div>
-            <div class="resume-item">
-               <h4 style="font-family: Gebriola">Diploma in Computer Information Technology</h4>
-              <p style="font-family: Gebriola"><em>Conell Computer Institute, Obudu, Cross River State, Nigeria</em></p>
-              <h5 style="font-family: Gebriola" class="text-dark">2011</h5>
-            </div>
+                <h2 class="text-uppercase text-primary" style="font-family: Gebriola; font-weight: bolder; font-size: 22px">Education</h2>
+              </div>
+              <div class="resume-item">
+                <h4 style="font-family: Gebriola">National Youth Services Corps</h4>
+                <h5 style="font-family: Gebriola" class="text-dark">2020 - 2021</h5>
+                <p style="font-family: Gebriola"><em>Heritage College, Egbe, Kogi State, Nigeria</em></p>
+                <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Discharge Certificate</em></p>
+              </div>
 
-             <div class="resume-item mt-2">
-               <h4 style="font-family: Gebriola">Web Development</h4>
-              <p style="font-family: Gebriola"><em>Mikesung Nextwave, Kaduna, Nigeria</em></p>
-               <h5 style="font-family: Gebriola" class="text-dark">2018</h5>
-            </div>
+              <div class="resume-item">
+                <h4 style="font-family: Gebriola">Bachelor of Science, Computer Science</h4>
+                <h5 style="font-family: Gebriola" class="text-dark">2015 - 2019</h5>
+                <p style="font-family: Gebriola"><em>Kaduna State University, Kaduna, Nigeria</em></p>
+                <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Second Class Upper (4.15 GPA)</em></p>
+              </div>
 
-            <div class="resume-item mt-2">
-               <h4 style="font-family: Gebriola">Digital Marketing Fundamentals</h4>
-              <p style="font-family: Gebriola"><em>Indian Institute of Digital Education,</em></p>
-              <h5 style="font-family: Gebriola" class="text-dark">2022</h5>
-            </div>
+              <div class="resume-item">
+                <h4 style="font-family: Gebriola">West Africa Examination Council (WAEC)</h4>
+                <h5 style="font-family: Gebriola" class="text-dark">2004 - 2010</h5>
+                <p style="font-family: Gebriola"><em>Obanliku Community Secondary, School, Cross River State, Nigeria</em></p>
+                <p style="font-family: Gebriola" class="text-primary font-weight-bold"><em>Distinctions</em></p>
+              </div>
+              <div class="section-title">
+                <h2 class="text-uppercase text-success" style="font-family: Gebriola; font-weight: bolder; font-size: 26px">Certification</h2>
+              </div>
+              <div class="resume-item">
+                <h4 style="font-family: Gebriola">Diploma in Computer Information Technology</h4>
+                <p style="font-family: Gebriola"><em>Conell Computer Institute, Obudu, Cross River State, Nigeria</em></p>
+                <h5 style="font-family: Gebriola" class="text-dark">2011</h5>
+              </div>
 
               <div class="resume-item mt-2">
-               <h4 style="font-family: Gebriola">Digital Marketing</h4>
-              <p style="font-family: Gebriola"><em>Google Digital Workshop</em></p>
-             <h5 style="font-family: Gebriola" class="text-dark">2022</h5>
+                <h4 style="font-family: Gebriola">Web Development</h4>
+                <p style="font-family: Gebriola"><em>Mikesung Nextwave, Kaduna, Nigeria</em></p>
+                <h5 style="font-family: Gebriola" class="text-dark">2018</h5>
+              </div>
+
+              <div class="resume-item mt-2">
+                <h4 style="font-family: Gebriola">Digital Marketing Fundamentals</h4>
+                <p style="font-family: Gebriola"><em>Indian Institute of Digital Education,</em></p>
+                <h5 style="font-family: Gebriola" class="text-dark">2022</h5>
+              </div>
+
+              <div class="resume-item mt-2">
+                <h4 style="font-family: Gebriola">Digital Marketing</h4>
+                <p style="font-family: Gebriola"><em>Google Digital Workshop</em></p>
+                <h5 style="font-family: Gebriola" class="text-dark">2022</h5>
+              </div>
             </div>
           </div>
+
         </div>
+      </section><!-- End Resume Section -->
 
-      </div>
-    </section><!-- End Resume Section -->
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio section-bg">
+        <div class="container">
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-               <h2 style="font-size: 22px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">Portfolio</h2>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/book1.jpg" class="img-fluid" alt="nieves Site">
-              <div class="portfolio-links">
-                <a href="assets/img/book1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://bookstore.scola.raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
-              </div>
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <h2 style="font-size: 22px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">Portfolio</h2>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/luxby.jpg" class="img-fluid" alt="nieves Site">
-              <div class="portfolio-links">
-                <a href="assets/img/luxby.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://luxbyrahma.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
-              </div>
-            </div>
-          </div>
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/cv1.jpg" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/cv1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://cv.scola.raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
-              </div>
-            </div>
-          </div>
-
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/akums.jpg" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/akums.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://careers.akum.edu.ng/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
-              </div>
-            </div>
-          </div>
-
-           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/deken.png" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/deken.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://www.deken.com.ng/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
-              </div>
-            </div>
-          </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/web-12.jpg" class="img-fluid" alt="raadaa Site" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/web-12.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
-              </div>
-            </div>
-          </div>
+          <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/web-07.jpg" class="img-fluid" alt="inventory" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/web-07.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="#" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Inventory Backend (admin)</b></a>
+              <div class="portfolio-wrap">
+                <img src="assets/img/book1.jpg" class="img-fluid" alt="nieves Site">
+                <div class="portfolio-links">
+                  <a href="assets/img/book1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://bookstore.scola.raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
+                </div>
               </div>
             </div>
-          </div>
 
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/web-11.jpg" class="img-fluid" alt="GamebrandGo Site" style="height: 170px">
-              <div class="portfolio-links">
-                <a href="assets/img/web-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a target="_blank" href="https://testgametest.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/luxby.jpg" class="img-fluid" alt="nieves Site">
+                <div class="portfolio-links">
+                  <a href="assets/img/luxby.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://luxbyrahma.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
+                </div>
               </div>
             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/cv1.jpg" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/cv1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://cv.scola.raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/akums.jpg" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/akums.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://careers.akum.edu.ng/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/deken.png" class="img-fluid" alt="darl Dispatch Site" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/deken.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://www.deken.com.ng/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/web-12.jpg" class="img-fluid" alt="raadaa Site" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/web-12.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://raadaa.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">visit Site</b></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/web-07.jpg" class="img-fluid" alt="inventory" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/web-07.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="#" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Inventory Backend (admin)</b></a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img src="assets/img/web-11.jpg" class="img-fluid" alt="GamebrandGo Site" style="height: 170px">
+                <div class="portfolio-links">
+                  <a href="assets/img/web-11.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a target="_blank" href="https://testgametest.com/" title="More Details"><i class="bx bx-link"></i> <b style="font-size: 19px">Visit Site</b></a>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
+      </section><!-- End Portfolio Section -->
 
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
+      <!-- ======= Services Section ======= -->
       <div class="container mt-5">
 
         <div class="section-title">
-         <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-               <h2 style="font-size: 28px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">services</h2>
-            </ul>
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="portfolio-flters">
+                <h2 style="font-size: 28px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">services</h2>
+              </ul>
+            </div>
           </div>
-        </div>
         </div>
 
         <div class="row">
           <div class="col-md-3 icon-box" data-aos="fade-up">
             <h6 class="title text-info">Backend Development</h6>
-                    <small>CORE-PHP, Laravel, and node.js</small>
-             </div>
+            <small>CORE-PHP, Laravel, and node.js</small>
+          </div>
 
 
-              <div class="col-md-3 icon-box" data-aos="fade-up">
-                <h6 class="title text-info"><a>Front-End Development</a></h6>
-                        <small>JavaScript; vue.js, Nuxt.js, React and CSS/Bootstrap</small>
-              </div>
-           
-           <div class="col-md-3 icon-box" data-aos="fade-up">
+          <div class="col-md-3 icon-box" data-aos="fade-up">
+            <h6 class="title text-info"><a>Front-End Development</a></h6>
+            <small>JavaScript; vue.js, Nuxt.js, React and CSS/Bootstrap</small>
+          </div>
+
+          <div class="col-md-3 icon-box" data-aos="fade-up">
             <h5 class="title text-info"><a>API Development</a></h5>
             <small>REST APIs; File-Based APIs, Web APIs, Library APIs, Database APIs, HTTP APIs</small>
           </div>
@@ -358,106 +385,105 @@
 
       </div>
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
 
-       
-        <div class="section-title">
-         <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-               <h2 style="font-size: 28px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">contact</h2>
-            </ul>
+
+          <div class="section-title">
+            <div class="row" data-aos="fade-up">
+              <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="portfolio-flters">
+                  <h2 style="font-size: 28px; font-family: Gebriola; font-weight: bolder;" class="text-info text-uppercase">contact</h2>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
 
-        <div class="row" data-aos="fade-in">
-          <div class="col-md-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>12, off Airport Road, Opposite Chief Palace, Kuchingoro, Abuja FCT.</p>
-              </div>
-
-              <div class="email mb-5">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <a href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a>
-              </div>
-
-              <div class="phone mb-4">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <a href="tel:+2348137950284" target="_blank">+234 813 795 0284</a>
-              </div>
-
-             <div class="phone mb-4">
-                <i class="bi bi-phone"></i>
-                <a href="tel:+2348135302455" target="_blank">+234 813 530 2455</a>
-              </div>
-
-
-              <div class="row text-center mt-5">
-                  <div class="col whatsapp">
-                   <a class="mb-5 text-center" href="https://web.whatsapp.com/+2348137950284" target="_blank" style="font-size: 35px"><i class="bi bi-whatsapp" style="font-size: 40px"></i> </a>
-                 </div>
-
-                 <div class="col">
-                   <a class="mb-5 text-center" href="https://github.com/iammilbert" target="_blank" style="font-size: 35px"><i class="bi bi-github" style="font-size: 40px"></i> </a>
+          <div class="row" data-aos="fade-in">
+            <div class="col-md-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>12, off Airport Road, Opposite Chief Palace, Kuchingoro, Abuja FCT.</p>
                 </div>
 
-                <div class="col">
-                     <a class="mb-5 text-center" href="https://www.linkedin.com/in/iammilbert/" target="_blank" style="font-size: 35px"><i class="bi bi-linkedin" style="font-size: 40px"></i> </a>
+                <div class="email mb-5">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <a href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a>
+                </div>
+
+                <div class="phone mb-4">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <a href="tel:+2348137950284" target="_blank">+234 813 795 0284</a>
+                </div>
+
+                <div class="phone mb-4">
+                  <i class="bi bi-phone"></i>
+                  <a href="tel:+2348135302455" target="_blank">+234 813 530 2455</a>
+                </div>
+
+
+                <div class="row text-center mt-5">
+                  <div class="col whatsapp">
+                    <a class="mb-5 text-center" href="https://web.whatsapp.com/+2348137950284" target="_blank" style="font-size: 35px"><i class="bi bi-whatsapp" style="font-size: 40px"></i> </a>
                   </div>
 
                   <div class="col">
-                     <a class="mb-5 text-center" href="mailto:michaelgabriel165@gmail.com" target="_blank" style="font-size: 35px"><i class="bi bi-envelope" style="font-size: 40px"></i> </a>
+                    <a class="mb-5 text-center" href="https://github.com/iammilbert" target="_blank" style="font-size: 35px"><i class="bi bi-github" style="font-size: 40px"></i> </a>
+                  </div>
+
+                  <div class="col">
+                    <a class="mb-5 text-center" href="https://www.linkedin.com/in/iammilbert/" target="_blank" style="font-size: 35px"><i class="bi bi-linkedin" style="font-size: 40px"></i> </a>
+                  </div>
+
+                  <div class="col">
+                    <a class="mb-5 text-center" href="mailto:michaelgabriel165@gmail.com" target="_blank" style="font-size: 35px"><i class="bi bi-envelope" style="font-size: 40px"></i> </a>
                   </div>
 
 
-              </div> 
-            </div> 
-          </div>
-          
-
-
-       <div class="col-md-7 mt-5">
-          <form action="https://formspree.io/f/mbjeolbo" method="post">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                  <input type="hidden" class="form-control" name="dateContact">
-                  <input type="hidden" class="form-control" name="timeContact">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
- 
-              </div>
-              <div class="text-center"><button type="submit" name="send" class="btn btn-primary">Send Message</button></div>
-            </form>
+            </div>
+
+
+            <div class="col-md-7 mt-5">
+              <form action="https://formspree.io/f/mbjeolbo" method="post">
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" class="form-control" id="name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Email</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                    <input type="hidden" class="form-control" name="dateContact">
+                    <input type="hidden" class="form-control" name="timeContact">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
+                </div>
+                <div class="form-group">
+                  <label for="name">Message</label>
+                  <textarea class="form-control" name="message" rows="10" required></textarea>
+                </div>
+                <div class="my-3">
+
+                </div>
+                <div class="text-center"><button type="submit" name="send" class="btn btn-primary">Send Message</button></div>
+              </form>
+            </div>
+
           </div>
 
         </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
+      </section><!-- End Contact Section -->
+    </div> <!-- end #resumeContent -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -471,99 +497,100 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
-  
-  
-  
-      <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-    <script>
-      window.formbutton =
-        window.formbutton ||
-        function() {
-          (formbutton.q = formbutton.q || []).push(arguments);
-        };
-      formbutton("create", {
-        action:"https://formspree.io/f/xeqwgkvr",
-        title: "Contact",
-        fields: [
-          {
-            type: "text",
-            label: "Name:",
-            name: "name",
-          },
-          {
-            type: "email",
-            label: "Email:",
-            name: "email",
-          },
-          {
-            type: "text",
-            label: "Address:",
-            name: "address1",
-          },
-          {
-            type: "text",
-            label: "&nbsp;",
-            name: "address2",
-          },
-          {
-            type: "textarea",
-            label: "Message:",
-            name: "message",
-          },
-          {
-            type: "checkbox",
-            label: "Please send me your monthly newsletter",
-            name: "_optin",
-          },
-          { type: "submit", value: "Send" }
-        ],
-        styles: {
-          fontFamily: "Montserrat",
-          modal: {
-            border: "1px solid #6D6875",
-            boxShadow: "6px 6px 0 #6D6875",
-            borderRadius: "0",
-          },
-          title: {
-            padding: "24px 24px 0px 24px",
-            background: "rgba(0,0,0,0)",
-            color: "#2e2a37",
-            fontFamily: "Marcellus SC",
-            fontSize: "2em",
-          },
-          body: {
-              padding: "16px 24px 24px",
-          },
-          field: {
-            display: "flex",
-          },
-          submitField: {
-            justifyContent: "flex-end",            
-          },
-          label: {
-            width: "40%",
-          },
-          checkboxLabel: {
-            width: "auto",
-          },
-          input: {
-            borderRight: "1px solid rgba(0,0,0,0.1)",
-            borderBottom: "1px solid rgba(0,0,0,0.1)",
-            borderRadius: "0px"
-          },
-          button: {
-            background: "text-primary",
-            fill: "skyblue",
-            border: "1px solid #6D6875",
-            boxShadow: "3px 3px 0px #6D6875"
-          },
-          closeButton: {
-            textShadow: "0 0 0 #2e2a37",
-          }
+
+
+  <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+  <script>
+    window.formbutton =
+      window.formbutton ||
+      function() {
+        (formbutton.q = formbutton.q || []).push(arguments);
+      };
+    formbutton("create", {
+      action: "https://formspree.io/f/xeqwgkvr",
+      title: "Contact",
+      fields: [{
+          type: "text",
+          label: "Name:",
+          name: "name",
         },
-        initiallyVisible: false
-      });
-    </script>
+        {
+          type: "email",
+          label: "Email:",
+          name: "email",
+        },
+        {
+          type: "text",
+          label: "Address:",
+          name: "address1",
+        },
+        {
+          type: "text",
+          label: "&nbsp;",
+          name: "address2",
+        },
+        {
+          type: "textarea",
+          label: "Message:",
+          name: "message",
+        },
+        {
+          type: "checkbox",
+          label: "Please send me your monthly newsletter",
+          name: "_optin",
+        },
+        {
+          type: "submit",
+          value: "Send"
+        }
+      ],
+      styles: {
+        fontFamily: "Montserrat",
+        modal: {
+          border: "1px solid #6D6875",
+          boxShadow: "6px 6px 0 #6D6875",
+          borderRadius: "0",
+        },
+        title: {
+          padding: "24px 24px 0px 24px",
+          background: "rgba(0,0,0,0)",
+          color: "#2e2a37",
+          fontFamily: "Marcellus SC",
+          fontSize: "2em",
+        },
+        body: {
+          padding: "16px 24px 24px",
+        },
+        field: {
+          display: "flex",
+        },
+        submitField: {
+          justifyContent: "flex-end",
+        },
+        label: {
+          width: "40%",
+        },
+        checkboxLabel: {
+          width: "auto",
+        },
+        input: {
+          borderRight: "1px solid rgba(0,0,0,0.1)",
+          borderBottom: "1px solid rgba(0,0,0,0.1)",
+          borderRadius: "0px"
+        },
+        button: {
+          background: "text-primary",
+          fill: "skyblue",
+          border: "1px solid #6D6875",
+          boxShadow: "3px 3px 0px #6D6875"
+        },
+        closeButton: {
+          textShadow: "0 0 0 #2e2a37",
+        }
+      },
+      initiallyVisible: false
+    });
+  </script>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -578,197 +605,51 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- html2pdf (for PDF download) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
-
-</html>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: "Roboto", sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-    }
-
-    header {
-      background-color: #0d6efd;
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-      border-radius: 0 0 20px 20px;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-    }
-
-    #resumeContent {
-      background-color: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 40px;
-      margin-top: 30px;
-    }
-
-    .section-title {
-      color: #0d6efd;
-      border-bottom: 2px solid #0d6efd;
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-
-    .info-item {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media print {
-      #downloadBtn, header, footer {
-        display: none !important;
-      }
-
-      body {
-        background: #fff;
-      }
-
-      #resumeContent {
-        box-shadow: none;
-        margin: 0;
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <h1>Michael Gabriel</h1>
-    <p>Full Stack Developer | Web Designer | Problem Solver</p>
-  </header>
-
-  <!-- Download Button -->
-  <div class="text-center my-3">
-    <button id="downloadBtn" class="btn btn-success">
-      <i class="bi bi-download"></i> Download Resume (PDF)
-    </button>
-  </div>
-
-  <!-- Resume Content -->
-  <main id="main">
-    <div id="resumeContent" class="container">
-
-      <!-- Profile Summary -->
-      <section class="mb-4">
-        <h3 class="section-title">Profile Summary</h3>
-        <p>
-          Enthusiastic and detail-oriented Full Stack Developer with experience in building 
-          scalable web applications using modern technologies such as Vue.js, Nuxt.js, Laravel, 
-          and PHP. Passionate about clean code, responsive design, and creating user-friendly 
-          digital experiences.
-        </p>
-      </section>
-
-      <!-- Contact Information -->
-      <section class="mb-4">
-        <h3 class="section-title">Contact Information</h3>
-        <div class="row">
-          <div class="col-md-6">
-            <p class="info-item"><i class="bi bi-envelope"></i> michaelgabriel@gmail.com</p>
-            <p class="info-item"><i class="bi bi-phone"></i> +234 806 123 4567</p>
-          </div>
-          <div class="col-md-6">
-            <p class="info-item"><i class="bi bi-geo-alt"></i> Lagos, Nigeria</p>
-            <p class="info-item"><i class="bi bi-github"></i> github.com/michaelgabriel</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills -->
-      <section class="mb-4">
-        <h3 class="section-title">Technical Skills</h3>
-        <ul class="list-unstyled">
-          <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), Vue.js, Nuxt.js, Bootstrap</li>
-          <li><strong>Backend:</strong> PHP, Laravel, MySQL, REST APIs</li>
-          <li><strong>Tools & Others:</strong> Git, Postman, SweetAlert2, Paystack Integration</li>
-        </ul>
-      </section>
-
-      <!-- Experience -->
-      <section class="mb-4">
-        <h3 class="section-title">Professional Experience</h3>
-
-        <div class="mb-3">
-          <h5>Full Stack Developer – Luxbyrahma (Remote)</h5>
-          <p class="text-muted">2023 – Present</p>
-          <ul>
-            <li>Developed an e-commerce platform with Laravel backend and Nuxt.js frontend.</li>
-            <li>Integrated Paystack payment gateway for smooth transactions.</li>
-            <li>Built product, cart, and checkout modules with secure authentication.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h5>Frontend Developer – Tradeify Technologies</h5>
-          <p class="text-muted">2021 – 2023</p>
-          <ul>
-            <li>Collaborated with design teams to implement responsive UIs using Bootstrap and Vue.js.</li>
-            <li>Optimized web performance, reducing load times by 30%.</li>
-            <li>Worked closely with backend developers to integrate APIs efficiently.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section class="mb-4">
-        <h3 class="section-title">Education</h3>
-        <p><strong>B.Sc. Computer Science</strong> – University of Lagos (2017 – 2021)</p>
-      </section>
-
-      <!-- Interests -->
-      <section>
-        <h3 class="section-title">Interests</h3>
-        <p>Technology trends, UI/UX design, football, and continuous learning.</p>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Michael Gabriel. All Rights Reserved.
-  </footer>
-
-  <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-  <!-- Download Script -->
+  <!-- Download script: uses exactly your page content (#resumeContent) -->
   <script>
-    document.getElementById("downloadBtn").addEventListener("click", function () {
-      const element = document.getElementById("resumeContent");
-      const opt = {
-        margin: 0.5,
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+      // temporarily hide elements that shouldn't appear in the PDF
+      var hiddenElems = document.querySelectorAll('.portfolio-lightbox, .back-to-top, #downloadBtn, .mobile-nav-toggle');
+      hiddenElems.forEach(function(el) {
+        el.dataset._oldDisplay = el.style.display;
+        el.style.display = 'none';
+      });
+
+      // options tuned for A4 portrait and decent image quality
+      var element = document.getElementById('resumeContent');
+      var opt = {
+        margin: [0.4, 0.4, 0.4, 0.4], // top, left, bottom, right in inches
         filename: 'Michael_Gabriel_Resume.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
+        html2canvas: { scale: 2, useCORS: true, logging: false },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
-      html2pdf().set(opt).from(element).save();
+
+      // generate PDF
+      html2pdf().set(opt).from(element).save().then(function() {
+        // restore hidden elements after PDF generation
+        hiddenElems.forEach(function(el) {
+          el.style.display = el.dataset._oldDisplay || '';
+          delete el.dataset._oldDisplay;
+        });
+      }).catch(function(err) {
+        // restore in case of error
+        hiddenElems.forEach(function(el) {
+          el.style.display = el.dataset._oldDisplay || '';
+          delete el.dataset._oldDisplay;
+        });
+        console.error('PDF generation error:', err);
+        alert('Failed to generate PDF. Try opening this page in Chrome and retry.');
+      });
     });
   </script>
 
 </body>
+
 </html>
