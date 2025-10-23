@@ -135,7 +135,33 @@
                 </div>
                 <div class="col-md-6">
                   <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>26</span></li>
+                    <li data-birth="1995-07-27" class="age-item">
+  <i class="bi bi-chevron-right"></i>
+  <strong>Age:</strong>
+  <span class="age-value">26</span>
+</li>
+
+<script>
+  function calcAgeFromISO(isoDateString) {
+    const [y, m, d] = isoDateString.split('-').map(Number);
+    return (function(birthDate){
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const mm = today.getMonth() - birthDate.getMonth();
+      if (mm < 0 || (mm === 0 && today.getDate() < birthDate.getDate())) age--;
+      return age;
+    })(new Date(y, m - 1, d));
+  }
+
+  document.querySelectorAll('.age-item').forEach(li => {
+    const birth = li.dataset.birth;
+    const span = li.querySelector('.age-value');
+    if (birth && span) span.textContent = calcAgeFromISO(birth);
+  });
+</script>
+
+                    
+                    
                     <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSC. Computer Science</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>M.Sc:</strong> <span>In-View</span></li>
                     <li><i class="bi bi-chevron-right"></i> <strong>Gender:</strong> <span>Male</span></li>
