@@ -5,35 +5,111 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Michael Gabriel - Resume</title>
 
-  <!-- Vendor CSS -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:400,600|Poppins:400,600" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Style -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- PDF Print Styling -->
   <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Layout and typography */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px 50px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      color: #0d6efd;
+      border-bottom: 2px solid #0d6efd;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .profile-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .profile-header img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .text-muted {
+      font-size: 13px;
+      color: #555 !important;
+    }
+
+    /* Download button */
     #downloadBtn {
       position: fixed;
       right: 20px;
       bottom: 20px;
-      z-index: 9999;
+      z-index: 999;
       border-radius: 50px;
-      padding: 10px 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      padding: 10px 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
 
+    /* PDF print settings */
     @media print {
-      #downloadBtn, .mobile-nav-toggle, .back-to-top, nav {
+      #downloadBtn {
         display: none !important;
       }
-      section, div, main {
-        page-break-inside: avoid !important;
+      body {
+        background: white;
+      }
+      main {
+        box-shadow: none;
+        margin: 0;
+        padding: 25px 35px;
       }
     }
   </style>
@@ -41,83 +117,91 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column text-center p-3">
-      <div class="profile">
-        <img src="assets/img/g-5.jpg" alt="" class="img-fluid rounded-circle mb-2">
-        <h1 class="text-light text-uppercase">Michael Gabriel</h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/iammilbert" class="github"><i class="bx bxl-github"></i></a>
-          <a href="mailto:michaelgabriel165@gmail.com"><i class="bx bxl-google"></i></a>
-          <a href="https://www.linkedin.com/in/iammilbert/"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= Floating PDF Download Button ======= -->
+  <!-- ======= Floating Download Button ======= -->
   <button id="downloadBtn" class="btn btn-success">
     <i class="bi bi-download"></i> Download Resume (PDF)
   </button>
 
   <!-- ======= Resume Content ======= -->
-  <main id="resumeContent" class="p-3">
-    <!-- Replace this section with your resume HTML -->
-    <section id="about" class="mb-4">
-      <h2 class="text-info text-uppercase">About</h2>
-      <p>Highly motivated and detail-oriented Full Stack Developer with 6 years of experience...</p>
+  <main id="resumeContent">
+    <div class="profile-header">
+      <img src="assets/img/g-5.jpg" alt="Profile">
+      <h1>Michael Gabriel</h1>
+      <p class="text-muted">Full Stack Developer | JavaScript | PHP | Laravel | Vue | Node.js | React</p>
+    </div>
+
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p>Highly motivated and detail-oriented Full Stack Developer with over 6 years of experience designing, developing, and maintaining scalable web applications. Skilled in both front-end and back-end development with proficiency in Laravel, Vue.js, Node.js, and React. Strong problem-solving and teamwork abilities with a passion for creating efficient and user-friendly digital solutions.</p>
     </section>
 
-    <section id="experience" class="mb-4">
-      <h2 class="text-info text-uppercase">Experience</h2>
+    <section class="section">
+      <h2>Experience</h2>
+
+      <div class="mb-3">
+        <h4>Full Stack Developer (Remote)</h4>
+        <p class="text-muted">Filly Code, Ghana — April 2023 – October 2025</p>
+        <ul>
+          <li>Designed and developed responsive web applications using Vue.js, Laravel, and MySQL.</li>
+          <li>Collaborated with cross-functional teams to deliver scalable and maintainable solutions.</li>
+          <li>Implemented RESTful APIs and integrated Paystack for payment processing.</li>
+          <li>Improved app performance and reduced loading times by optimizing queries and caching.</li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <h4>Full Stack Developer (Hybrid)</h4>
+        <p class="text-muted">Techvibes Ltd., Nigeria — March 2022 – January 2023</p>
+        <ul>
+          <li>Built and deployed full-stack e-commerce platforms using Laravel and Vue.js.</li>
+          <li>Maintained APIs and optimized backend logic for better performance and scalability.</li>
+          <li>Worked closely with UI/UX teams to ensure seamless integration and clean design.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
       <ul>
-        <li><strong>Full Stack Developer (Remote)</strong> – Filly Code, Ghana (Apr 2023 – Oct 2025)</li>
-        <li><strong>Full Stack Developer (Hybrid)</strong> – Techvibes Ltd, Nigeria (Mar 2022 – Jan 2023)</li>
+        <li><strong>B.Sc Computer Science</strong> — Kaduna State University (2015 – 2019)</li>
+        <li><strong>NYSC</strong> — Heritage College, Egbe, Kogi State (2020 – 2021)</li>
       </ul>
     </section>
 
-    <section id="education" class="mb-4">
-      <h2 class="text-info text-uppercase">Education</h2>
+    <section class="section">
+      <h2>Technical Skills</h2>
       <ul>
-        <li>B.Sc Computer Science – Kaduna State University (2015–2019)</li>
-        <li>NYSC – Heritage College, Egbe, Kogi State (2020–2021)</li>
+        <li><strong>Languages:</strong> JavaScript, PHP, HTML, CSS, SQL</li>
+        <li><strong>Frameworks:</strong> Laravel, Vue.js, Node.js, React</li>
+        <li><strong>Tools:</strong> Git, MySQL, REST APIs, Bootstrap, SweetAlert2</li>
+        <li><strong>Soft Skills:</strong> Team collaboration, problem-solving, adaptability</li>
       </ul>
     </section>
 
-    <section id="services" class="mb-4">
-      <h2 class="text-info text-uppercase">Services</h2>
-      <p>Backend, Frontend, API Development, Database Management.</p>
-    </section>
-
-    <section id="portfolio" class="mb-4">
-      <h2 class="text-info text-uppercase">Portfolio</h2>
+    <section class="section">
+      <h2>Services</h2>
       <ul>
-        <li><a href="https://platform.scola.ng/bookstore" target="_blank">Scola Bookstore</a></li>
-        <li><a href="https://raadaa.com" target="_blank">Raadaa</a></li>
+        <li>Custom Web Application Development</li>
+        <li>Frontend and Backend API Integration</li>
+        <li>E-Commerce Development</li>
+        <li>Database Design and Optimization</li>
       </ul>
-    </section>
-
-    <section id="contact" class="mb-4">
-      <h2 class="text-info text-uppercase">Contact</h2>
-      <p>Email: <a href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a></p>
-      <p>Phone: <a href="tel:+2348137950284">+234 813 795 0284</a></p>
     </section>
   </main>
 
-  <!-- ======= Scripts ======= -->
+  <!-- ======= PDF Script ======= -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('downloadBtn').addEventListener('click', () => {
-      const resumeContent = document.getElementById('resumeContent');
+      const element = document.getElementById('resumeContent');
       const opt = {
-        margin:       0.2,
-        filename:     'Michael_Gabriel_Resume.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true },
-        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+        margin: 0.2,
+        filename: 'Michael_Gabriel_Resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
-      html2pdf().set(opt).from(resumeContent).save();
+      html2pdf().set(opt).from(element).save();
     });
   </script>
 
