@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Michael Gabriel - Resume</title>
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Raleway:400,600|Poppins:400,600" rel="stylesheet">
+
+  <!-- Style -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- PDF Print Styling -->
+  <style>
+    #downloadBtn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9999;
+      border-radius: 50px;
+      padding: 10px 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    @media print {
+      #downloadBtn, .mobile-nav-toggle, .back-to-top, nav {
+        display: none !important;
+      }
+      section, div, main {
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column text-center p-3">
+      <div class="profile">
+        <img src="assets/img/g-5.jpg" alt="" class="img-fluid rounded-circle mb-2">
+        <h1 class="text-light text-uppercase">Michael Gabriel</h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/iammilbert" class="github"><i class="bx bxl-github"></i></a>
+          <a href="mailto:michaelgabriel165@gmail.com"><i class="bx bxl-google"></i></a>
+          <a href="https://www.linkedin.com/in/iammilbert/"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= Floating PDF Download Button ======= -->
+  <button id="downloadBtn" class="btn btn-success">
+    <i class="bi bi-download"></i> Download Resume (PDF)
+  </button>
+
+  <!-- ======= Resume Content ======= -->
+  <main id="resumeContent" class="p-3">
+    <!-- Replace this section with your resume HTML -->
+    <section id="about" class="mb-4">
+      <h2 class="text-info text-uppercase">About</h2>
+      <p>Highly motivated and detail-oriented Full Stack Developer with 6 years of experience...</p>
+    </section>
+
+    <section id="experience" class="mb-4">
+      <h2 class="text-info text-uppercase">Experience</h2>
+      <ul>
+        <li><strong>Full Stack Developer (Remote)</strong> – Filly Code, Ghana (Apr 2023 – Oct 2025)</li>
+        <li><strong>Full Stack Developer (Hybrid)</strong> – Techvibes Ltd, Nigeria (Mar 2022 – Jan 2023)</li>
+      </ul>
+    </section>
+
+    <section id="education" class="mb-4">
+      <h2 class="text-info text-uppercase">Education</h2>
+      <ul>
+        <li>B.Sc Computer Science – Kaduna State University (2015–2019)</li>
+        <li>NYSC – Heritage College, Egbe, Kogi State (2020–2021)</li>
+      </ul>
+    </section>
+
+    <section id="services" class="mb-4">
+      <h2 class="text-info text-uppercase">Services</h2>
+      <p>Backend, Frontend, API Development, Database Management.</p>
+    </section>
+
+    <section id="portfolio" class="mb-4">
+      <h2 class="text-info text-uppercase">Portfolio</h2>
+      <ul>
+        <li><a href="https://platform.scola.ng/bookstore" target="_blank">Scola Bookstore</a></li>
+        <li><a href="https://raadaa.com" target="_blank">Raadaa</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="mb-4">
+      <h2 class="text-info text-uppercase">Contact</h2>
+      <p>Email: <a href="mailto:michaelgabriel165@gmail.com">michaelgabriel165@gmail.com</a></p>
+      <p>Phone: <a href="tel:+2348137950284">+234 813 795 0284</a></p>
+    </section>
+  </main>
+
+  <!-- ======= Scripts ======= -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+      const resumeContent = document.getElementById('resumeContent');
+      const opt = {
+        margin:       0.2,
+        filename:     'Michael_Gabriel_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(resumeContent).save();
+    });
+  </script>
+
+</body>
+</html>
