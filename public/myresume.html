@@ -9,69 +9,64 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #f9fafb;
+      background: #f8f9fa;
       color: #333;
       margin: 0;
-      padding: 0;
     }
 
-    /* Layout and typography */
     main {
       max-width: 900px;
       margin: 40px auto;
-      background: white;
+      background: #fff;
       padding: 40px 50px;
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       text-transform: uppercase;
+      color: #0d6efd;
     }
 
     h2 {
       font-size: 20px;
       font-weight: 600;
-      margin-top: 25px;
-      margin-bottom: 12px;
       color: #0d6efd;
       border-bottom: 2px solid #0d6efd;
       display: inline-block;
       padding-bottom: 3px;
+      margin-top: 25px;
+      margin-bottom: 12px;
     }
 
     h4 {
       font-size: 16px;
       font-weight: 600;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     p, li {
-      font-size: 12px;
-      line-height: 1.2;
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     ul {
+      padding-left: 20px;
       margin-bottom: 0;
-      padding-left: 10px;
-    }
-
-    .section {
-      margin-bottom: 9px;
     }
 
     .profile-header {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 25px;
     }
 
     .profile-header img {
@@ -79,15 +74,14 @@
       height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     .text-muted {
-      font-size: 11px;
+      font-size: 13px;
       color: #555 !important;
     }
 
-    /* Download button */
     #downloadBtn {
       position: fixed;
       right: 20px;
@@ -98,13 +92,9 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
 
-    /* PDF print settings */
     @media print {
       #downloadBtn {
         display: none !important;
-      }
-      body {
-        background: white;
       }
       main {
         box-shadow: none;
@@ -117,35 +107,54 @@
 
 <body>
 
-  <!-- ======= Floating Download Button ======= -->
-  <button id="downloadBtn" class="btn btn-success">
-    <i class="bi bi-download"></i> Download Resume (PDF)
+  <!-- Floating Download Resume Button -->
+  <button id="downloadBtn" class="btn btn-success" title="Download Resume as PDF">
+    <i class="bi bi-download"></i> Download Resume
   </button>
 
-  <!-- ======= Resume Content ======= -->
+  <!-- Resume Content -->
   <main id="resumeContent">
     <div class="profile-header">
-      <img src="assets/img/g-5.jpg" alt="Profile">
+      <img src="assets/img/g-5.jpg" alt="Michael Gabriel">
       <h1>Michael Gabriel</h1>
-      <p class="text-muted">Full Stack Developer | JavaScript | PHP | Laravel | Vue | Node.js | React| Digital Marketer </p>
+      <p class="text-muted">Full Stack Developer | PHP | Laravel | Vue.js | Node.js | React | JavaScript</p>
     </div>
 
-    <section class="section">
-      <h2>Professional Summary</h2>
-      <p>Highly motivated and detail-oriented Full Stack Developer with over 6 years of experience designing, developing, and maintaining scalable web applications. Skilled in both front-end and back-end development with proficiency in Laravel, Vue.js, Node.js, and React. Strong problem-solving and teamwork abilities with a passion for creating efficient and user-friendly digital solutions.</p>
+    <!-- About -->
+    <section>
+      <h2>About</h2>
+      <p>Highly motivated and detail-oriented Full Stack Developer with over 6 years of experience designing, developing, and maintaining scalable web applications. Proficient in both front-end and back-end development, with strong knowledge of Laravel, Vue.js, Node.js, and React. Passionate about building efficient, secure, and user-friendly solutions.</p>
     </section>
 
-    <section class="section">
+    <!-- Bio Data -->
+    <section>
+      <h2>Bio Data</h2>
+      <ul>
+        <li><strong>Full Name:</strong> Michael Gabriel</li>
+        <li><strong>Phone:</strong> +234 813 795 0284</li>
+        <li><strong>Email:</strong> michaelgabriel165@gmail.com</li>
+        <li><strong>Address:</strong> Kaduna, Nigeria</li>
+      </ul>
+    </section>
+
+    <!-- Career Objective -->
+    <section>
+      <h2>Career Objective</h2>
+      <p>To leverage my technical expertise and creative problem-solving skills to build impactful, scalable, and high-performing applications that improve user experience and drive business growth. I aim to contribute to a team that values innovation, collaboration, and continuous learning.</p>
+    </section>
+
+    <!-- Experience -->
+    <section>
       <h2>Experience</h2>
 
       <div class="mb-3">
         <h4>Full Stack Developer (Remote)</h4>
         <p class="text-muted">Filly Code, Ghana — April 2023 – October 2025</p>
         <ul>
-          <li>Designed and developed responsive web applications using Vue.js, Laravel, and MySQL.</li>
-          <li>Collaborated with cross-functional teams to deliver scalable and maintainable solutions.</li>
-          <li>Implemented RESTful APIs and integrated Paystack for payment processing.</li>
-          <li>Improved app performance and reduced loading times by optimizing queries and caching.</li>
+          <li>Developed full-featured web applications using Laravel, Vue.js, and MySQL.</li>
+          <li>Implemented Paystack API for secure online payments.</li>
+          <li>Collaborated with designers and backend teams to deliver user-friendly solutions.</li>
+          <li>Optimized application performance through API and database tuning.</li>
         </ul>
       </div>
 
@@ -153,14 +162,15 @@
         <h4>Full Stack Developer (Hybrid)</h4>
         <p class="text-muted">Techvibes Ltd., Nigeria — March 2022 – January 2023</p>
         <ul>
-          <li>Built and deployed full-stack e-commerce platforms using Laravel and Vue.js.</li>
-          <li>Maintained APIs and optimized backend logic for better performance and scalability.</li>
-          <li>Worked closely with UI/UX teams to ensure seamless integration and clean design.</li>
+          <li>Designed and deployed e-commerce systems using Laravel and Vue.js.</li>
+          <li>Built custom APIs and integrated third-party services for automation.</li>
+          <li>Improved backend logic, reducing query load and improving system performance.</li>
         </ul>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Education -->
+    <section>
       <h2>Education</h2>
       <ul>
         <li><strong>B.Sc Computer Science</strong> — Kaduna State University (2015 – 2019)</li>
@@ -168,36 +178,28 @@
       </ul>
     </section>
 
-    <section class="section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Languages:</strong> JavaScript, PHP, HTML, CSS, SQL</li>
-        <li><strong>Frameworks:</strong> Laravel, Vue.js, Node.js, React</li>
-        <li><strong>Tools:</strong> Git, MySQL, REST APIs, Bootstrap, SweetAlert2</li>
-        <li><strong>Soft Skills:</strong> Team collaboration, problem-solving, adaptability</li>
-      </ul>
-    </section>
-
-    <section class="section">
+    <!-- Services -->
+    <section>
       <h2>Services</h2>
       <ul>
         <li>Custom Web Application Development</li>
         <li>Frontend and Backend API Integration</li>
-        <li>E-Commerce Development</li>
+        <li>E-Commerce Solutions</li>
         <li>Database Design and Optimization</li>
+        <li>Maintenance and Support</li>
       </ul>
     </section>
   </main>
 
-  <!-- ======= PDF Script ======= -->
+  <!-- PDF Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     document.getElementById('downloadBtn').addEventListener('click', () => {
       const element = document.getElementById('resumeContent');
       const opt = {
-        margin: 0.1,
+        margin: 0.2,
         filename: 'Michael_Gabriel_Resume.pdf',
-        image: { type: 'jpeg', quality: 0.90 },
+        image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true },
         jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
